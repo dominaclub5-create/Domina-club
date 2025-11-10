@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>DOMINA CLUB | Studio Dimagrimento & Benessere Donna</title>
+<meta name="description" content="DOMINA CLUB - Studio dimagrimento e tono per donne. EMS, Pilates, Posturale, Circuito Switching. Sede: Massafra (TA)." />
+<style>
+  :root{
+    --bg:#0b0f12;
+    --card:#0f1518;
+    --muted:#9aa3a9;
+    --accent1:#ff2d95; /* fucsia */
+    --accent2:#00d1c6; /* turchese */
+    --whatsapp:#25D366;
+    --glass: rgba(255,255,255,0.03);
+    --radius:12px;
+    --maxw:1100px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:Inter, "Helvetica Neue", Arial, sans-serif;background:linear-gradient(180deg,var(--bg),#071015);color:#e6eef0;line-height:1.6;padding-top:76px;-webkit-font-smoothing:antialiased}
+  header{position:fixed;left:0;right:0;top:0;height:76px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));backdrop-filter:blur(6px);border-bottom:1px solid rgba(255,255,255,0.02);z-index:999}
+  .brand{display:flex;gap:14px;align-items:center}
+  .logo{font-weight:800;font-size:18px;letter-spacing:1px;color:var(--accent1);background:linear-gradient(90deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));padding:10px 14px;border-radius:10px}
+  nav{display:flex;gap:12px;align-items:center}
+  nav a{color:#d6e6e8;text-decoration:none;padding:8px 10px;border-radius:8px;font-weight:600;font-size:14px;opacity:0.95}
+  nav a:hover{color:var(--accent2);transform:translateY(-2px)}
+  main{max-width:var(--maxw);margin:0 auto;padding:36px 20px}
+  .hero{display:grid;grid-template-columns:1fr 380px;gap:28px;align-items:center;min-height:72vh;padding:28px 0;opacity:0;transform:translateY(8px);animation:fadeInUp .7s ease forwards}
+  .kicker{display:inline-block;background:linear-gradient(90deg,var(--accent2),var(--accent1));color:#021214;padding:8px 12px;border-radius:999px;font-weight:800;font-size:13px;margin-bottom:16px}
+  h1{font-size:40px;line-height:1.02;margin-bottom:12px;color:linear-gradient(90deg,var(--accent1),var(--accent2))}
+  h2.big{font-size:30px;margin:0;color:#fff}
+  .lead{color:var(--muted);font-size:16px;margin-bottom:18px}
+  .cta{display:flex;gap:12px;flex-wrap:wrap}
+  .btn{background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#021214;padding:12px 18px;border-radius:999px;text-decoration:none;font-weight:800;box-shadow:0 10px 30px rgba(0,0,0,0.5)}
+  .btn.alt{background:transparent;color:var(--accent1);border:1px solid rgba(255,255,255,0.06)}
+  .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:14px;border:1px solid rgba(255,255,255,0.03);box-shadow:0 8px 30px rgba(2,6,8,0.6)}
+  .small{font-size:13px;color:var(--muted);margin-bottom:8px}
+  section{padding:72px 0;opacity:0;transform:translateY(6px);animation:fadeInUp .7s ease forwards}
+  section:nth-of-type(2){animation-delay:.12s}
+  section:nth-of-type(3){animation-delay:.18s}
+  section:nth-of-type(4){animation-delay:.24s}
+  h3{font-size:22px;color:#fff;margin-bottom:12px;border-left:4px solid var(--accent2);padding-left:12px}
+  .two-col{display:grid;grid-template-columns:1fr 360px;gap:24px;align-items:start}
+  .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+  .service{background:var(--card);padding:16px;border-radius:12px;border:1px solid rgba(255,255,255,0.02);}
+  .service h4{color:#fff;margin-bottom:8px}
+  .service p{color:var(--muted);font-size:14px}
+  footer{padding:36px 20px;text-align:center;color:var(--muted);font-size:14px;border-top:1px solid rgba(255,255,255,0.02)}
+  .socials{display:flex;gap:8px;justify-content:center;margin-top:12px}
+  .socials a{color:#e6eef0;text-decoration:none;padding:8px 12px;border-radius:10px;background:rgba(255,255,255,0.02);font-weight:700}
+  .contact-list p{margin:8px 0;color:var(--muted)}
+
+  /* WhatsApp floating button */
+  .whatsapp-btn{position:fixed;right:18px;bottom:18px;z-index:1000;background:var(--whatsapp);color:white;padding:14px;border-radius:999px;box-shadow:0 12px 30px rgba(2,6,8,0.5);display:flex;gap:10px;align-items:center;text-decoration:none;font-weight:800}
+  .whatsapp-btn svg{width:20px;height:20px;display:block;filter:drop-shadow(0 3px 6px rgba(2,6,8,0.3))}
+
+  /* responsive */
+  @media(max-width:980px){.hero{grid-template-columns:1fr};.two-col{grid-template-columns:1fr}}
+  @media(max-width:520px){header{padding:0 12px}.logo{font-size:15px}.kicker{font-size:12px}h1{font-size:28px}.hero{padding:18px 0}}
+
+  @keyframes fadeInUp{
+    from{opacity:0;transform:translateY(12px)}
+    to{opacity:1;transform:translateY(0)}
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">
+    <div class="logo">DOMINA CLUB</div>
+    <div style="color:var(--muted);font-size:13px">Studio Dimagrimento & Benessere Donna</div>
+  </div>
+  <nav>
+    <a href="#hero">Home</a>
+    <a href="#about">Chi siamo</a>
+    <a href="#services">Servizi</a>
+    <a href="#contact">Contatti</a>
+  </nav>
+</header>
+
+<main>
+  <section id="hero" class="hero">
+    <div>
+      <span class="kicker">EMS • BODY SCULPTING</span>
+      <h2 class="big">Ritrova forma, energia e fiducia — programmi pensati per la donna.</h2>
+      <p class="lead">Programmi personalizzati con sistema EMS, allenamenti in piccoli gruppi e percorsi mirati per dimagrire, tonificare e migliorare la postura.</p>
+      <div class="cta">
+        <a class="btn" href="#contact">Prenota consulenza</a>
+        <a class="btn alt" href="#services">Scopri servizi</a>
+      </div>
+      <p style="margin-top:16px;color:var(--muted)"><strong>📍</strong> Via Generale De Bernardis, 27 – Massafra (TA)</p>
+    </div>
+
+    <aside class="card">
+      <div class="small">In evidenza</div>
+      <h3 style="border-left:none;padding-left:0;margin-top:6px">Percorso BODY SCULPTING</h3>
+      <p style="color:var(--muted)">Programma intensivo con EMS, coaching alimentare e sessioni in small-group per risultati visibili e duraturi.</p>
+      <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap">
+        <div style="background:rgba(255,255,255,0.02);padding:8px 10px;border-radius:10px">EMS</div>
+        <div style="background:rgba(255,255,255,0.02);padding:8px 10px;border-radius:10px">Personalizzato</div>
+        <div style="background:rgba(255,255,255,0.02);padding:8px 10px;border-radius:10px">Small-group</div>
+      </div>
+    </aside>
+  </section>
+
+  <section id="about">
+    <div class="container two-col" style="max-width:var(--maxw);margin:0 auto">
+      <div>
+        <h3>Chi siamo</h3>
+        <p style="color:var(--muted)">DOMINA CLUB è uno studio dedicato al dimagrimento e al benessere femminile. Offriamo percorsi mirati per donne che desiderano perdere peso, rimodellare la figura e migliorare il tono muscolare con approccio scientifico, empatia e attenzione al dettaglio.</p>
+        <p style="color:var(--muted);margin-top:12px">Combiniamo allenamento funzionale, pilates e tecniche posturali con l'uso del sistema EMS per massimizzare i risultati in modo sicuro.</p>
+      </div>
+      <aside class="card">
+        <div class="small">Orari</div>
+        <div style="color:var(--muted)">Lun–Ven 08:00 — 20:00<br>Sab 09:00 — 13:00</div>
+        <div style="margin-top:12px"><a href="mailto:info@dominaclub.it" class="btn" style="display:inline-block">Contatta via email</a></div>
+      </aside>
+    </div>
+  </section>
+
+  <section id="services" style="background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent)">
+    <div class="container" style="max-width:var(--maxw);margin:0 auto">
+      <h3>Servizi e offerte</h3>
+      <div class="services-grid" style="margin-top:12px">
+        <div class="service">
+          <h4>Studio Dimagrimento e Tono (Body Sculpting)</h4>
+          <p>Programmi personalizzati con sistema EMS per favorire perdita di grasso e definizione muscolare.</p>
+        </div>
+        <div class="service">
+          <h4>Programmi Personalizzati con EMS</h4>
+          <p>Valutazione iniziale, piano su misura e monitoraggio costante.</p>
+        </div>
+        <div class="service">
+          <h4>Allenamento in Piccoli Gruppi</h4>
+          <p>Circuito SWITCHING — sessioni dinamiche per cardio e forza in gruppi selezionati.</p>
+        </div>
+        <div class="service">
+          <h4>PILATES</h4>
+          <p>Lezioni per stabilità, controllo e tono muscolare profondo.</p>
+        </div>
+        <div class="service">
+          <h4>Posturale</h4>
+          <p>Percorsi mirati per correggere squilibri posturali e ridurre dolori.</p>
+        </div>
+        <div class="service">
+          <h4>Tecniche di Allenamento Funzionale</h4>
+          <p>Esercizi mirati alla funzionalità e alla performance quotidiana.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container" style="max-width:var(--maxw);margin:0 auto;display:grid;grid-template-columns:1fr 320px;gap:24px;align-items:start">
+      <div>
+        <h3>Contatti</h3>
+        <p class="contact-list"><strong>📍 Indirizzo:</strong> Via Generale De Bernardis, 27 – Massafra (TA)</p>
+        <p class="contact-list"><strong>📞 Telefono:</strong> <a href="tel:+393914011593" style="color:var(--accent2);text-decoration:none;font-weight:700">+39 391 401 1593</a></p>
+        <p class="contact-list"><strong>📧 Email:</strong> <a href="mailto:info@dominaclub.it" style="color:var(--accent2);text-decoration:none">info@dominaclub.it</a></p>
+      </div>
+      <aside class="card">
+        <div class="small">Seguici</div>
+        <div class="socials">
+          <a href="https://instagram.com/Domina_club" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://www.facebook.com/share/1Frbrwy74g/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">Facebook</a>
+        </div>
+        <div style="margin-top:12px;color:var(--muted)">Orari: Lun–Ven 08:00–20:00 • Sab 09:00–13:00</div>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<!-- WhatsApp button with prefilled message -->
+<a class="whatsapp-btn" href="https://wa.me/393914011593?text=Ciao!%20Vorrei%20informazioni%20sui%20programmi%20di%20allenamento%20DOMINA%20CLUB%20%F0%9F%92%AA" target="_blank" rel="noopener noreferrer" aria-label="Contattaci su WhatsApp">
+  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M20.52 3.48A11.88 11.88 0 0 0 12.05.5C6.01.5 1.16 5.35 1.16 11.4c0 2.01.53 3.87 1.46 5.5L.05 23.5l6.83-1.78a11.69 11.69 0 0 0 4.88 1.02c6.05 0 10.9-4.85 10.9-10.9 0-2.92-1.13-5.66-3.29-7.34z" fill="white" opacity="0.04"/><path d="M17.472 14.719c-.293-.147-1.737-.856-2.005-.953-.268-.098-.463-.146-.658.148-.196.293-.756.953-.927 1.149-.17.196-.34.22-.633.074-.294-.147-1.24-.456-2.363-1.46-.875-.78-1.464-1.742-1.636-2.036-.172-.294-.018-.452.129-.598.132-.125.294-.327.44-.49.147-.162.196-.27.293-.45.098-.196.049-.367-.025-.514-.074-.147-.658-1.587-.902-2.175-.237-.57-.48-.494-.658-.504l-.561-.01c-.196 0-.514.074-.784.367-.27.293-1.03 1.006-1.03 2.455 0 1.449 1.053 2.85 1.197 3.05.147.196 2.071 3.163 5.016 4.433 2.946 1.27 2.946.847 3.475.794.528-.049 1.717-.556 1.96-1.093.245-.536.245-.996.171-1.093-.074-.098-.268-.147-.56-.294z" fill="white"/></svg>
+  <span>Chatta con noi</span>
+</a>
+
+<footer>
+  <div>© DOMINA CLUB — Studio Dimagrimento & Benessere Donna</div>
+  <div style="margin-top:6px;color:var(--muted);font-size:13px">Sito generato e personalizzato — aggiungi foto e contenuti per renderlo unico.</div>
+</footer>
+
+</body>
+</html>
